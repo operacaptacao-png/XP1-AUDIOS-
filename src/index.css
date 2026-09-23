@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  --xp-primary: #f47851;
+  --xp-secondary: #bf7060;
+  --xp-accent: #ffcd07;
+  --device-blue: #174887;
+  --black: #1A1A1A;
+  --white: #FFFFFF;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+  background-color: #0f172a;
+}
+
+/* Glass background overlay */
+.glass-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1;
+}
+
+/* Custom scrollbars inside device screen */
+.device-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.device-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.device-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(23, 72, 135, 0.25);
+  border-radius: 4px;
+}
+.device-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 120, 81, 0.6);
+}
+
+/* CD Spinning Animation */
+@keyframes spinDisc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.playing-spin {
+  animation: spinDisc 3.5s linear infinite;
+}
+
+.paused-spin {
+  animation: spinDisc 3.5s linear infinite;
+  animation-play-state: paused;
+}
+
+/* Range input thumb styling */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #f47851;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  border: 2px solid #ffffff;
+  transition: transform 0.1s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover,
+input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #f47851;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  border: 2px solid #ffffff;
+}
+
+/* Screen transition animation */
+@keyframes fadeScreen {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.screen-fade {
+  animation: fadeScreen 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}

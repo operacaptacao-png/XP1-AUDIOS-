@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>operapod | XP1</title>
+    <meta name="description" content="Media Center oficial para alunos do XP1 da Opera Idiomas, simulador de MP3 Player com suporte híbrido de áudio e vídeo." />
+    
+    <!-- Open Graph / Social Cards -->
+    <meta property="og:title" content="operapod | XP1" />
+    <meta property="og:description" content="Media Center oficial para alunos do XP1 da Opera Idiomas, simulador de MP3 Player com suporte híbrido de áudio e vídeo." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="operapod | XP1" />
+    <meta name="twitter:description" content="Media Center oficial para alunos do XP1 da Opera Idiomas" />
+    <meta name="twitter:image" content="https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- PWA & Mobile Web App Capabilities -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#174887" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="operapod" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png?v=3" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png?v=3" />
+    <link rel="apple-touch-icon" sizes="167x167" href="https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png?v=3" />
+    <link rel="shortcut icon" href="https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png?v=3" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(err => {
+            console.log('SW registration error:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
+

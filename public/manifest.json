@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "operapod | XP1",
+  "short_name": "operapod",
+  "description": "Media Center oficial para alunos do XP1 da Opera Idiomas, simulador de MP3 Player com suporte híbrido de áudio e vídeo.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#174887",
+  "theme_color": "#174887",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.postimg.cc/hG6LXfjC/xp1-incon-app.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
